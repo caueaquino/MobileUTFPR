@@ -6,7 +6,11 @@ import Login from '../components/Login';
 const LoginPage = (props) => {
   return (
     <View>
-      <Login registerRoute={() => props.navigation.navigate('Register')} />
+      <Login 
+        mainRoute={() => props.navigation.navigate('Main')}
+        registerRoute={() => props.navigation.navigate('Register')} 
+        recoverRoute={() => props.navigation.navigate('Recover')}
+      />
     </View>
   );
 };

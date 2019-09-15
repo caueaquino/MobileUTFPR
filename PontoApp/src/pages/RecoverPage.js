@@ -1,12 +1,13 @@
 import React from 'react';
 import { View } from 'react-native';
 
-import Register from '../components/Register';
+import Recover from '../components/Recover';
 
 const RegisterPage = (props) => {
-  return (    
+  return (
+    
     <View>
-      <Register backRoute={() => props.navigation.goBack()} />
+      <Recover backRoute={() => props.navigation.goBack()} />
     </View>
   );
 };

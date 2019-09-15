@@ -1,47 +1,33 @@
 import React from 'react';
-import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity, Picker } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity } from 'react-native';
 
-const Register = (props) => {
+const Recover = (props) => {
     const {backRoute} = props;
 
     return(
-      <View style={style.register} >
+        <View style={style.recover} >
             <Text style={style.titleStyle} >
-                Cadastro
-            </Text>
-            
-            <Text style={style.text2Style} >
-                Preencha os campos abaixo:
+                Recuperação
             </Text>
 
-            <Text style={style.textStyle}>Nome:</Text>
-            <TextInput placeholder="Nome" style={style.inputStyle}></TextInput>
+            <Text style={style.text2Style} >Para recuperar sua senha, preencha o campo abaixo que enviaremos sua nova senha em seu e-mail. </Text>
 
-            <Text style={style.textStyle}>Email:</Text>
-            <TextInput placeholder="Email" style={style.inputStyle}></TextInput>
-
-            <Text style={style.textStyle}>Senha:</Text>
-            <TextInput placeholder="Senha" style={style.inputStyle}></TextInput>
-          
-            <Text style={style.textStyle} >Sexo:</Text>
-            <Picker style={style.inputStyle}>
-                <Picker.Item label="Masculino" value="0" />
-                <Picker.Item label="Feminino" value="1" />
-            </Picker>
+            <Text style={style.textStyle}>E-mail:</Text>
+            <TextInput placeholder="E-mail" style={style.inputStyle}></TextInput>
 
             <TouchableOpacity style={style.buttonStyle} >
                 <Button onPress={() => {backRoute();}} title="Confirmar" color="#D98E04" ></Button>
             </TouchableOpacity>
 
             <TouchableOpacity style={style.buttonStyle} >
-                <Button onPress={() => {backRoute();}} title="Cancelar" color="#D98E04" ></Button>
+                <Button onPress={() => {backRoute();}} title="Voltar" color="#D98E04" ></Button>
             </TouchableOpacity>
-      </View>  
+        </View>  
     );
 }
 
 const style = StyleSheet.create({
-    register: {
+    recover: {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -57,7 +43,7 @@ const style = StyleSheet.create({
     },
     textStyle: {
         color: 'white',
-        fontSize: 20,
+        fontSize: 22,
         minWidth: '90%',
         textAlign: 'left',
         marginBottom: 10
@@ -66,9 +52,10 @@ const style = StyleSheet.create({
         color: 'white',
         fontSize: 20,
         color: 'white',
-        minWidth: '90%',
+        width: '80%',
         textAlign: 'center',
-        marginBottom: 20
+        marginTop: 50,
+        marginBottom: 40
     },
     inputStyle: {
         backgroundColor: '#7F25D9',
@@ -77,16 +64,16 @@ const style = StyleSheet.create({
         paddingLeft: "5%",
         paddingRight: '5%',
         borderRadius: 5,
-        fontSize: 18,
-        marginBottom: 20
+        fontSize: 20,
+        marginBottom: 40
     },
     buttonStyle: {
-        marginTop: 15,
+        marginTop: 18,
         width: '95%',
         borderRadius: 30,
         backgroundColor: '#2F0459',
     },
 });
 
-export default Register;
+export default Recover;
 

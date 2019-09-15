@@ -1,9 +1,8 @@
 import React from 'react';
-import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity } from 'react-native';
-
+import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity, DataPi } from 'react-native';
 
 const Login = (props) => {
-    const { registerRoute } = props; 
+    const {mainRoute, registerRoute, recoverRoute} = props; 
 
     return(
         <View style={style.loginStyle}>
@@ -12,20 +11,21 @@ const Login = (props) => {
                 <Text style={style.title2Style}>App</Text>
             </View>
         
-            <Text style={style.textStyle}>Email:</Text>
-            <TextInput placeholder="Email" style={style.inputStyle}></TextInput>
+            <Text style={style.textStyle}>E-mail:</Text>
+            <TextInput placeholder="E-mail" style={style.inputStyle}></TextInput>
+
             <Text style={style.textStyle}>Senha:</Text>
-            <TextInput type="password" placeholder="Senha" style={style.inputStyle}></TextInput>
+            <TextInput placeholder="Senha" style={style.inputStyle}></TextInput>
 
             <TouchableOpacity style={style.buttonStyle} >
-                <Button title="Entrar" color="#D98E04" ></Button>
+                <Button onPress={() => {mainRoute();}} title="Entrar" color="#D98E04" ></Button>
             </TouchableOpacity>
             
             <TouchableOpacity style={style.buttonStyle} >
                 <Button onPress={() => {registerRoute();}} title="Cadastrar-se" fontSize={25} color="#D98E04" ></Button>
             </TouchableOpacity>
             
-            <Text style={style.recoverStyle}>Esqueceu a senha ?</Text>
+            <Text onPress={() => {recoverRoute();}} style={style.recoverStyle}>Esqueceu a senha ?</Text>
         </View>
     );
 }
@@ -72,13 +72,13 @@ const style = StyleSheet.create({
         minWidth: '95%',
         paddingLeft: "5%",
         paddingRight: '5%',
-        borderRadius: 20,
+        borderRadius: 5,
         fontSize: 20,
         marginBottom: 20
     },
     buttonStyle: {
         marginTop: 10,
-        width: '90%',
+        width: '95%',
         borderRadius: 30,
         backgroundColor: '#2F0459',
     },
