@@ -1,24 +1,17 @@
-import React, {Fragment} from 'react';
-import { View, Text } from 'react-native';
+// import { createStackNavigator, createAppContainer } from 'react-navigation';
 
-import Login from './src/components/Login';
+import LoginPage from './src/pages/LoginPage';
+import RegisterPage from './src/pages/RegisterPage';
 
-const viewStyle = {
-    backgroundColor: "#666666",
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '100%',
-    height: '100%'
-}
+// const StackNavigator = createStackNavigator({
+//   "Login": {
+//     screen: LoginPage
+//   },
+//   "Register": {
+//     screen: RegisterPage
+//   }
+// });
 
-const App = () => {
-  return (
-    
-    <View style={viewStyle}>
-      <Login></Login>
-    </View>
-  );
-};
+// const AppContainer = createAppContainer(StackNavigator);
 
-export default App;
+export default LoginPage;
