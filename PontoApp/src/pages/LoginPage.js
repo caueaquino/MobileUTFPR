@@ -3,11 +3,10 @@ import { View } from 'react-native';
 
 import Login from '../components/Login';
 
-const LoginPage = () => {
+const LoginPage = (props) => {
   return (
-    
     <View>
-      <Login></Login>
+      <Login registerRoute={() => props.navigation.navigate('Register')} />
     </View>
   );
 };

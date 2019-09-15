@@ -1,17 +1,21 @@
-// import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import { createAppContainer } from 'react-navigation';
 
 import LoginPage from './src/pages/LoginPage';
 import RegisterPage from './src/pages/RegisterPage';
 
-// const StackNavigator = createStackNavigator({
-//   "Login": {
-//     screen: LoginPage
-//   },
-//   "Register": {
-//     screen: RegisterPage
-//   }
-// });
+const App = createAppContainer(
+    createStackNavigator({
+        Login: LoginPage,
+        Register: RegisterPage,
+    },
+    {
+        initialRouteName: 'Login',
+        headerMode: 'none',
+        navigationOptions: {
+            headerVisible: false,
+        }
+    })
+);
 
-// const AppContainer = createAppContainer(StackNavigator);
-
-export default LoginPage;
+export default App;

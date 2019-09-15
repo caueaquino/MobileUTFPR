@@ -3,6 +3,8 @@ import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity } from 'rea
 
 
 const Login = (props) => {
+    const { registerRoute } = props; 
+
     return(
         <View style={style.loginStyle}>
             <View style={style.rowStyle}>
@@ -20,7 +22,7 @@ const Login = (props) => {
             </TouchableOpacity>
             
             <TouchableOpacity style={style.buttonStyle} >
-                <Button title="Cadastrar-se" fontSize={25} color="#D98E04" ></Button>
+                <Button onPress={() => {registerRoute();}} title="Cadastrar-se" fontSize={25} color="#D98E04" ></Button>
             </TouchableOpacity>
             
             <Text style={style.recoverStyle}>Esqueceu a senha ?</Text>
