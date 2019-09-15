@@ -15,7 +15,7 @@ const Login = (props) => {
             <TextInput placeholder="E-mail" style={style.inputStyle}></TextInput>
 
             <Text style={style.textStyle}>Senha:</Text>
-            <TextInput placeholder="Senha" style={style.inputStyle}></TextInput>
+            <TextInput secureTextEntry={true} placeholder="Senha" style={style.inputStyle}></TextInput>
 
             <TouchableOpacity style={style.buttonStyle} >
                 <Button onPress={() => {mainRoute();}} title="Entrar" color="#D98E04" ></Button>

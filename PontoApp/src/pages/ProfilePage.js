@@ -1,12 +1,14 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
+
+import Profile from '../components/Profile';
 
 const ProfilePage = (props) => {
   return (
     <View>
-       <Text>profile</Text>
+      <Profile />
     </View>
   );
-};
+}
 
 export default ProfilePage;

@@ -1,14 +1,19 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import { createDrawerNavigator } from 'react-navigation-drawer'
+import { createAppContainer } from 'react-navigation';
 
-import Main from '../components/Main';
+import PontoPage from './PontoPage';
+import ProfilePage from './ProfilePage';
+import AboutPage from './AboutPage';
 
-const MainPage = (props) => {
-  return (
-    <View>
-      <Main />
-    </View>
-  );
-};
+const MainPage = createAppContainer(
+  createDrawerNavigator({
+    Ponto: PontoPage,
+    Profile: ProfilePage,
+    About: AboutPage,
+  },
+  {
+    initialRouteName: 'Ponto',
+  })
+);
 
 export default MainPage;

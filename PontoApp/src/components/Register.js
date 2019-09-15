@@ -21,7 +21,7 @@ const Register = (props) => {
             <TextInput placeholder="Email" style={style.inputStyle}></TextInput>
 
             <Text style={style.textStyle}>Senha:</Text>
-            <TextInput placeholder="Senha" style={style.inputStyle}></TextInput>
+            <TextInput secureTextEntry={true} placeholder="Senha" style={style.inputStyle}></TextInput>
           
             <Text style={style.textStyle} >Sexo:</Text>
             <Picker style={style.inputStyle}>
