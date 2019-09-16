@@ -6,7 +6,10 @@ import About from '../components/About';
 const AboutPage = (props) => {
     return (
         <View>
-            <About />
+            <About
+                openDrawer={() => {props.navigation.openDrawer();}}
+                goBack={() => {props.navigation.goBack();}}
+            />
         </View>
     );
 }

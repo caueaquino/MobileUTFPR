@@ -6,7 +6,10 @@ import Profile from '../components/Profile';
 const ProfilePage = (props) => {
   return (
     <View>
-      <Profile />
+      <Profile 
+        openDrawer={() => {props.navigation.openDrawer();}}
+        goBack={() => {props.navigation.goBack();}}
+      />
     </View>
   );
 }
